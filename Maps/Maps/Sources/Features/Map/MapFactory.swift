@@ -8,7 +8,8 @@ import UIKit.UIViewController
 
 final  class MapFactory {
     static func setup() -> UIViewController {
-        let controller = MapViewController()
+        let view: MapCustomViewConfigurable = MapCustomView()
+        let controller = MapViewController(customView: view)
         return controller
     }
 }
