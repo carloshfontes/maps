@@ -23,6 +23,7 @@ final class MapViewController: UIViewController {
     override func loadView() {
         super.loadView()
         self.view = customView
+        customView.delegate = self 
     }
     
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ final class MapViewController: UIViewController {
             let coordinate = self.customView.pinCoordinate
             self.customView.updateCoordinate(coordinate)
         }
+    
     }
     
     required init?(coder: NSCoder) {
@@ -48,6 +50,12 @@ final class MapViewController: UIViewController {
     }
 }
 
-extension MapViewController: LocationPermissionsDelegate {
+extension MapViewController: MapBottomSheetViewDelegate {
+    func didTapAddPin() {
+        
+    }
     
+    func didTapVisualizePin() {
+        
+    }
 }

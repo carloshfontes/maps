@@ -8,7 +8,8 @@ import UIKit
 import MapboxMaps
 
 protocol MapCustomViewConfigurable: UIView {
-    var mapView: MapView { get set }
+    var delegate: MapBottomSheetViewDelegate? { get set }
+    var mapView: MapView { get }
     var pinCoordinate: CLLocationCoordinate2D { get }
     func updateCoordinate(_ coordinate: CLLocationCoordinate2D)
 }
@@ -37,6 +38,7 @@ final class MapCustomView: UIView {
     
     private(set) lazy var positionPinView: PositionPinView = {
         let view = PositionPinView()
+        view.isHidden = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -47,8 +49,21 @@ final class MapCustomView: UIView {
         return view
     }()
     
+    private lazy var sheetView: MapBottomSheetViewConfigurable = {
+        let view = MapBottomSheetView()
+        view.translatesAutoresizingMaskIntoConstraints = false 
+        return view
+    }()
+    
     var pinCoordinate: CLLocationCoordinate2D {
         mapView.mapboxMap.coordinate(for: pinImageView.center)
+    }
+    
+    
+    var delegate: MapBottomSheetViewDelegate? {
+        didSet {
+            sheetView.delegate = delegate
+        }
     }
     
     init() {
@@ -72,6 +87,7 @@ extension MapCustomView: ViewCodable {
         addSubview(mapView)
         mapView.addSubview(positionPinView)
         mapView.addSubview(pinImageView)
+        addSubview(sheetView)
     }
     
     func setupConstraints() {
@@ -86,7 +102,11 @@ extension MapCustomView: ViewCodable {
             positionPinView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             pinImageView.centerYAnchor.constraint(equalTo: mapView.centerYAnchor),
-            pinImageView.centerXAnchor.constraint(equalTo: mapView.centerXAnchor)
+            pinImageView.centerXAnchor.constraint(equalTo: mapView.centerXAnchor),
+            
+            sheetView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            sheetView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            sheetView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
 }

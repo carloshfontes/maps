@@ -19,6 +19,7 @@
 		402A8DA3286E7D45004C3FCD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8DA2286E7D44004C3FCD /* MapView.swift */; };
 		402A8DA7286E7D9F004C3FCD /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8DA6286E7D9F004C3FCD /* ViewCodable.swift */; };
 		40C00FBD286E92B4002D9820 /* PositionPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C00FBC286E92B4002D9820 /* PositionPinView.swift */; };
+		40C00FC128710C0A002D9820 /* MapBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		402A8DA2286E7D44004C3FCD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		402A8DA6286E7D9F004C3FCD /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		40C00FBC286E92B4002D9820 /* PositionPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPinView.swift; sourceTree = "<group>"; };
+		40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBottomSheetView.swift; sourceTree = "<group>"; };
 		5985E4A55F3F79A0B7EB94CC /* Pods_Maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EC0CE15C489F7529465801 /* Pods-Maps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maps.debug.xcconfig"; path = "Target Support Files/Pods-Maps/Pods-Maps.debug.xcconfig"; sourceTree = "<group>"; };
 		B4CFD1803FC37A3974CA480B /* Pods-Maps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maps.release.xcconfig"; path = "Target Support Files/Pods-Maps/Pods-Maps.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		402A8D99286E772E004C3FCD /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */,
 				402A8D9A286E773D004C3FCD /* MapFactory.swift */,
 				402A8D9C286E7747004C3FCD /* MapViewController.swift */,
 				402A8D9E286E77B2004C3FCD /* MapInteractor.swift */,
@@ -291,6 +294,7 @@
 				402A8D82286E7529004C3FCD /* AppDelegate.swift in Sources */,
 				402A8D84286E7529004C3FCD /* SceneDelegate.swift in Sources */,
 				402A8D9F286E77B2004C3FCD /* MapInteractor.swift in Sources */,
+				40C00FC128710C0A002D9820 /* MapBottomSheetView.swift in Sources */,
 				402A8D9D286E7747004C3FCD /* MapViewController.swift in Sources */,
 				402A8DA1286E77DF004C3FCD /* MapPresenter.swift in Sources */,
 			);
@@ -439,6 +443,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +472,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

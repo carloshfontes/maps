@@ -39,7 +39,7 @@ final class PositionPinView: UIView {
     private let coordinateLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = .lightGray
-        label.font = .systemFont(ofSize: 18, weight: .light)
+        label.font = .systemFont(ofSize: 18, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
