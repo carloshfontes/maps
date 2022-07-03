@@ -7,16 +7,16 @@
 import UIKit
 import MapboxMaps
 
-protocol MapDisplayLogic: AnyObject {
-    
-}
-
 final class MapViewController: UIViewController {
     private let customView: MapCustomViewConfigurable
-    private var pointAnnotationManager: PointAnnotationManager?
+    private let router: MapRoutingLogic
     
-    init(customView: MapCustomViewConfigurable) {
+    init(
+        customView: MapCustomViewConfigurable,
+        router: MapRoutingLogic
+    ) {
         self.customView = customView
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -28,11 +28,9 @@ final class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customView.mapView.location.delegate = self
         customView.mapView.location.locationProvider.requestAlwaysAuthorization()
         customView.mapView.location.locationProvider.startUpdatingLocation()
                 
-    
         
         let centerCoordinate = customView.mapView.cameraState.center
         customView.mapView.camera.ease(to: CameraOptions(center: centerCoordinate, zoom: 13), duration: 1.3)
@@ -52,10 +50,13 @@ final class MapViewController: UIViewController {
 
 extension MapViewController: MapBottomSheetViewDelegate {
     func didTapAddPin() {
-        
+        debugPrint("äa")
+        router.routeToAddPin()
     }
     
     func didTapVisualizePin() {
-        
+        debugPrint("bb")
+
+        router.routeToVisualizePin()
     }
 }

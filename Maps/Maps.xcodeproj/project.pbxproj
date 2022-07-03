@@ -14,10 +14,9 @@
 		402A8D8E286E7532004C3FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402A8D8C286E7532004C3FCD /* LaunchScreen.storyboard */; };
 		402A8D9B286E773D004C3FCD /* MapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8D9A286E773D004C3FCD /* MapFactory.swift */; };
 		402A8D9D286E7747004C3FCD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8D9C286E7747004C3FCD /* MapViewController.swift */; };
-		402A8D9F286E77B2004C3FCD /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8D9E286E77B2004C3FCD /* MapInteractor.swift */; };
-		402A8DA1286E77DF004C3FCD /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8DA0286E77DF004C3FCD /* MapPresenter.swift */; };
 		402A8DA3286E7D45004C3FCD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8DA2286E7D44004C3FCD /* MapView.swift */; };
 		402A8DA7286E7D9F004C3FCD /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8DA6286E7D9F004C3FCD /* ViewCodable.swift */; };
+		40A3201F2871FC8E000EC71C /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A3201E2871FC8E000EC71C /* MapRouter.swift */; };
 		40C00FBD286E92B4002D9820 /* PositionPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C00FBC286E92B4002D9820 /* PositionPinView.swift */; };
 		40C00FC128710C0A002D9820 /* MapBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */; };
 /* End PBXBuildFile section */
@@ -31,10 +30,9 @@
 		402A8D8F286E7532004C3FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		402A8D9A286E773D004C3FCD /* MapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFactory.swift; sourceTree = "<group>"; };
 		402A8D9C286E7747004C3FCD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		402A8D9E286E77B2004C3FCD /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
-		402A8DA0286E77DF004C3FCD /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		402A8DA2286E7D44004C3FCD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		402A8DA6286E7D9F004C3FCD /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		40A3201E2871FC8E000EC71C /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		40C00FBC286E92B4002D9820 /* PositionPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPinView.swift; sourceTree = "<group>"; };
 		40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBottomSheetView.swift; sourceTree = "<group>"; };
 		5985E4A55F3F79A0B7EB94CC /* Pods_Maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,9 +132,8 @@
 				40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */,
 				402A8D9A286E773D004C3FCD /* MapFactory.swift */,
 				402A8D9C286E7747004C3FCD /* MapViewController.swift */,
-				402A8D9E286E77B2004C3FCD /* MapInteractor.swift */,
-				402A8DA0286E77DF004C3FCD /* MapPresenter.swift */,
 				402A8DA2286E7D44004C3FCD /* MapView.swift */,
+				40A3201E2871FC8E000EC71C /* MapRouter.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -293,10 +290,9 @@
 				402A8D9B286E773D004C3FCD /* MapFactory.swift in Sources */,
 				402A8D82286E7529004C3FCD /* AppDelegate.swift in Sources */,
 				402A8D84286E7529004C3FCD /* SceneDelegate.swift in Sources */,
-				402A8D9F286E77B2004C3FCD /* MapInteractor.swift in Sources */,
 				40C00FC128710C0A002D9820 /* MapBottomSheetView.swift in Sources */,
 				402A8D9D286E7747004C3FCD /* MapViewController.swift in Sources */,
-				402A8DA1286E77DF004C3FCD /* MapPresenter.swift in Sources */,
+				40A3201F2871FC8E000EC71C /* MapRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
