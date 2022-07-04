@@ -4,14 +4,15 @@
 //
 //  Created by Carlos Fontes on 30/06/22.
 //
-
 import UIKit
+import MapboxMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        ResourceOptionsManager.default.resourceOptions.accessToken = "pk.eyJ1IjoiY2FybG9zZm9udGVzIiwiYSI6ImNsNTFwYjJkODA3dXIzaWxqdWN0NzY0YWsifQ.qNm5vCkeJNaCa0S8mNhWDA"
         return true
     }
 

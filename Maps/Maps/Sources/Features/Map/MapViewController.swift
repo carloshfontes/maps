@@ -30,17 +30,12 @@ final class MapViewController: UIViewController {
         super.viewDidLoad()
         customView.mapView.location.locationProvider.requestAlwaysAuthorization()
         customView.mapView.location.locationProvider.startUpdatingLocation()
-                
-        
         let centerCoordinate = customView.mapView.cameraState.center
-        customView.mapView.camera.ease(to: CameraOptions(center: centerCoordinate, zoom: 13), duration: 1.3)
-                
-        customView.mapView.mapboxMap.onEvery(.cameraChanged) { [weak self] _ in
-            guard let self = self else { return }
-            let coordinate = self.customView.pinCoordinate
-            self.customView.updateCoordinate(coordinate)
-        }
-    
+        
+        customView.mapView.camera.ease(
+            to: CameraOptions(center: centerCoordinate, zoom: 13),
+            duration: 1.3
+        )
     }
     
     required init?(coder: NSCoder) {
@@ -50,13 +45,10 @@ final class MapViewController: UIViewController {
 
 extension MapViewController: MapBottomSheetViewDelegate {
     func didTapAddPin() {
-        debugPrint("äa")
         router.routeToAddPin()
     }
     
     func didTapVisualizePin() {
-        debugPrint("bb")
-
         router.routeToVisualizePin()
     }
 }

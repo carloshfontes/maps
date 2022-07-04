@@ -18,10 +18,12 @@ final class MapRouter {
 
 extension MapRouter: MapRoutingLogic {
     func routeToAddPin() {
-        
+        let controller = AddPinFactory.setup()
+        viewController?.navigationController?.pushViewController(controller, animated: true)
     }
     
     func routeToVisualizePin() {
-        
+        let controller = VisualizePinFactory.setup()
+        viewController?.navigationController?.pushViewController(controller, animated: true)
     }
 }
