@@ -7,7 +7,12 @@
 import UIKit
 import CoreLocation
 
+protocol PoisitionPinDelegate: AnyObject {
+    func didTapAddPin()
+}
+
 protocol PositionPinViewConfigurable: UIView {
+    var delegate: PoisitionPinDelegate? { get set }
     func updateCoordinate(_ coordinate: CLLocationCoordinate2D)
 }
 
@@ -20,7 +25,7 @@ final class PositionPinView: UIView {
     }()
     
     private lazy var contentStackView: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [titleLabel, coordinateLabel])
+        let view = UIStackView(arrangedSubviews: [titleLabel, coordinateLabel, addButton])
         view.axis = .vertical
         view.spacing = 8
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -44,9 +49,25 @@ final class PositionPinView: UIView {
         return label
     }()
     
+    private lazy var addButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Adicionar pin", for: .normal)
+        button.backgroundColor = .link
+        button.addTarget(self, action: #selector(didTapAddPin), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    weak var delegate: PoisitionPinDelegate?
+    
     init() {
         super.init(frame: .zero)
         setupView()
+    }
+    
+    @objc
+    func didTapAddPin() {
+        delegate?.didTapAddPin()
     }
     
     required init?(coder: NSCoder) {
@@ -78,10 +99,10 @@ extension PositionPinView: ViewCodable {
             contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            contentStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            contentStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24),
             contentStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
             contentStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
-            contentStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
+            contentStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24)
         ])
     }
 }

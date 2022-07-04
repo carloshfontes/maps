@@ -17,6 +17,9 @@
 		402A8DA3286E7D45004C3FCD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8DA2286E7D44004C3FCD /* MapView.swift */; };
 		402A8DA7286E7D9F004C3FCD /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A8DA6286E7D9F004C3FCD /* ViewCodable.swift */; };
 		40A3201F2871FC8E000EC71C /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A3201E2871FC8E000EC71C /* MapRouter.swift */; };
+		40A320412872012E000EC71C /* AddPinFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A320402872012E000EC71C /* AddPinFactory.swift */; };
+		40A320432872013A000EC71C /* AddPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A320422872013A000EC71C /* AddPinViewController.swift */; };
+		40A3204528720142000EC71C /* AddPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A3204428720142000EC71C /* AddPinView.swift */; };
 		40C00FBD286E92B4002D9820 /* PositionPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C00FBC286E92B4002D9820 /* PositionPinView.swift */; };
 		40C00FC128710C0A002D9820 /* MapBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +36,9 @@
 		402A8DA2286E7D44004C3FCD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		402A8DA6286E7D9F004C3FCD /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		40A3201E2871FC8E000EC71C /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		40A320402872012E000EC71C /* AddPinFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPinFactory.swift; sourceTree = "<group>"; };
+		40A320422872013A000EC71C /* AddPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPinViewController.swift; sourceTree = "<group>"; };
+		40A3204428720142000EC71C /* AddPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPinView.swift; sourceTree = "<group>"; };
 		40C00FBC286E92B4002D9820 /* PositionPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPinView.swift; sourceTree = "<group>"; };
 		40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBottomSheetView.swift; sourceTree = "<group>"; };
 		5985E4A55F3F79A0B7EB94CC /* Pods_Maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +99,6 @@
 		402A8D95286E76B1004C3FCD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				40C00FBB286E9294002D9820 /* Components */,
 				402A8DA4286E7D8D004C3FCD /* Utils */,
 				402A8D98286E76D5004C3FCD /* Features */,
 			);
@@ -121,6 +126,7 @@
 		402A8D98286E76D5004C3FCD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				40A3203F28720114000EC71C /* AddPin */,
 				402A8D99286E772E004C3FCD /* Map */,
 			);
 			path = Features;
@@ -154,12 +160,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		40C00FBB286E9294002D9820 /* Components */ = {
+		40A3203F28720114000EC71C /* AddPin */ = {
 			isa = PBXGroup;
 			children = (
 				40C00FBC286E92B4002D9820 /* PositionPinView.swift */,
+				40A320402872012E000EC71C /* AddPinFactory.swift */,
+				40A320422872013A000EC71C /* AddPinViewController.swift */,
+				40A3204428720142000EC71C /* AddPinView.swift */,
 			);
-			path = Components;
+			path = AddPin;
 			sourceTree = "<group>";
 		};
 		661C379D2EF8A639D4999533 /* Frameworks */ = {
@@ -285,9 +294,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				402A8DA3286E7D45004C3FCD /* MapView.swift in Sources */,
+				40A320432872013A000EC71C /* AddPinViewController.swift in Sources */,
+				40A3204528720142000EC71C /* AddPinView.swift in Sources */,
 				40C00FBD286E92B4002D9820 /* PositionPinView.swift in Sources */,
 				402A8DA7286E7D9F004C3FCD /* ViewCodable.swift in Sources */,
 				402A8D9B286E773D004C3FCD /* MapFactory.swift in Sources */,
+				40A320412872012E000EC71C /* AddPinFactory.swift in Sources */,
 				402A8D82286E7529004C3FCD /* AppDelegate.swift in Sources */,
 				402A8D84286E7529004C3FCD /* SceneDelegate.swift in Sources */,
 				40C00FC128710C0A002D9820 /* MapBottomSheetView.swift in Sources */,

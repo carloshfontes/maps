@@ -10,11 +10,9 @@ import MapboxMaps
 protocol MapCustomViewConfigurable: UIView {
     var delegate: MapBottomSheetViewDelegate? { get set }
     var mapView: MapView { get }
-    var pinCoordinate: CLLocationCoordinate2D { get }
-    func updateCoordinate(_ coordinate: CLLocationCoordinate2D)
 }
 
-final class MapCustomView: UIView {
+final class MapCustomView: UIView, MapCustomViewConfigurable {
     private let resourceOptions = ResourceOptions(accessToken: "pk.eyJ1IjoiY2FybG9zZm9udGVzIiwiYSI6ImNsNTFwYjJkODA3dXIzaWxqdWN0NzY0YWsifQ.qNm5vCkeJNaCa0S8mNhWDA")
     
     private let cameraOptions = CameraOptions(
@@ -36,29 +34,11 @@ final class MapCustomView: UIView {
         return view
     }()
     
-    private(set) lazy var positionPinView: PositionPinView = {
-        let view = PositionPinView()
-        view.isHidden = true
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    private let pinImageView: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "red_pin"))
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     private lazy var sheetView: MapBottomSheetViewConfigurable = {
         let view = MapBottomSheetView()
         view.translatesAutoresizingMaskIntoConstraints = false 
         return view
     }()
-    
-    var pinCoordinate: CLLocationCoordinate2D {
-        mapView.mapboxMap.coordinate(for: pinImageView.center)
-    }
-    
     
     var delegate: MapBottomSheetViewDelegate? {
         didSet {
@@ -76,17 +56,9 @@ final class MapCustomView: UIView {
     }
 }
 
-extension MapCustomView: MapCustomViewConfigurable {
-    func updateCoordinate(_ coordinate: CLLocationCoordinate2D) {
-        positionPinView.updateCoordinate(coordinate)
-    }
-}
-
 extension MapCustomView: ViewCodable {
     func setupHierarchy() {
         addSubview(mapView)
-        mapView.addSubview(positionPinView)
-        mapView.addSubview(pinImageView)
         addSubview(sheetView)
     }
     
@@ -96,13 +68,6 @@ extension MapCustomView: ViewCodable {
             mapView.leadingAnchor.constraint(equalTo: leadingAnchor),
             mapView.trailingAnchor.constraint(equalTo: trailingAnchor),
             mapView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            positionPinView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            positionPinView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            positionPinView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            pinImageView.centerYAnchor.constraint(equalTo: mapView.centerYAnchor),
-            pinImageView.centerXAnchor.constraint(equalTo: mapView.centerXAnchor),
             
             sheetView.leadingAnchor.constraint(equalTo: leadingAnchor),
             sheetView.trailingAnchor.constraint(equalTo: trailingAnchor),
