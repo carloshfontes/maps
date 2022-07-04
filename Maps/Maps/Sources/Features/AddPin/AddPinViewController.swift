@@ -49,5 +49,8 @@ extension AddPinViewController: PoisitionPinDelegate {
         pointAnnotation.iconAnchor = .bottom
         let pointAnnotationManager = customView.mapView.annotations.makePointAnnotationManager()
         pointAnnotationManager.annotations = [pointAnnotation]
+        
+        let storage = LocationCoreDataStorage()
+        storage.create(coordinate: customView.pinCoordinate)
     }
 }

@@ -1,18 +1,18 @@
 //
-//  MapView.swift
+//  VisualizePinView.swift
 //  Maps
 //
-//  Created by Carlos Fontes on 30/06/22.
+//  Created by Carlos Fontes on 04/07/22.
 //
 import UIKit
 import MapboxMaps
 
-protocol MapCustomViewConfigurable: UIView {
-    var delegate: MapBottomSheetViewDelegate? { get set }
+protocol VisualizePinViewConfigurable: UIView {
     var mapView: MapView { get }
+    func addAnnotation(by coordinate: CLLocationCoordinate2D) -> PointAnnotation
 }
 
-final class MapCustomView: UIView, MapCustomViewConfigurable {
+final class VisualizePinView: UIView {
     private let cameraOptions = CameraOptions(
         center: CLLocationCoordinate2D(latitude: -21.2267226, longitude: -47.8609912),
         zoom: 15.5
@@ -22,7 +22,6 @@ final class MapCustomView: UIView, MapCustomViewConfigurable {
         cameraOptions: cameraOptions,
         styleURI: .outdoors
     )
-
     
     lazy var mapView: MapView = {
         let view = MapView(frame: .zero, mapInitOptions: mapOptions)
@@ -30,18 +29,6 @@ final class MapCustomView: UIView, MapCustomViewConfigurable {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    private lazy var sheetView: MapBottomSheetViewConfigurable = {
-        let view = MapBottomSheetView()
-        view.translatesAutoresizingMaskIntoConstraints = false 
-        return view
-    }()
-    
-    var delegate: MapBottomSheetViewDelegate? {
-        didSet {
-            sheetView.delegate = delegate
-        }
-    }
     
     init() {
         super.init(frame: .zero)
@@ -53,10 +40,18 @@ final class MapCustomView: UIView, MapCustomViewConfigurable {
     }
 }
 
-extension MapCustomView: ViewCodable {
+extension VisualizePinView: VisualizePinViewConfigurable {
+    func addAnnotation(by coordinate: CLLocationCoordinate2D) -> PointAnnotation {
+        var annotation = PointAnnotation(coordinate: coordinate)
+        annotation.image = .init(image: UIImage(named: "red_pin")!, name: "red_pin")
+        annotation.iconAnchor = .bottom
+        return annotation
+    }
+}
+
+extension VisualizePinView: ViewCodable {
     func setupHierarchy() {
         addSubview(mapView)
-        addSubview(sheetView)
     }
     
     func setupConstraints() {
@@ -64,11 +59,7 @@ extension MapCustomView: ViewCodable {
             mapView.topAnchor.constraint(equalTo: topAnchor),
             mapView.leadingAnchor.constraint(equalTo: leadingAnchor),
             mapView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            mapView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            sheetView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            sheetView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            sheetView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            mapView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }

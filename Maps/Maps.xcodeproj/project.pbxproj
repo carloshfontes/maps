@@ -20,6 +20,17 @@
 		40A320412872012E000EC71C /* AddPinFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A320402872012E000EC71C /* AddPinFactory.swift */; };
 		40A320432872013A000EC71C /* AddPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A320422872013A000EC71C /* AddPinViewController.swift */; };
 		40A3204528720142000EC71C /* AddPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A3204428720142000EC71C /* AddPinView.swift */; };
+		40A958E02872F38600635F34 /* Maps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40A958DE2872F38600635F34 /* Maps.xcdatamodeld */; };
+		40A958E22872F4CB00635F34 /* CoreDataStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958E12872F4CB00635F34 /* CoreDataStorageManager.swift */; };
+		40A958E42872F5E600635F34 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958E32872F5E600635F34 /* LocationRepository.swift */; };
+		40A958E62872F6F900635F34 /* LocationCoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958E52872F6F900635F34 /* LocationCoreDataStorage.swift */; };
+		40A958E82872F86500635F34 /* StorageErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958E72872F86500635F34 /* StorageErrors.swift */; };
+		40A958EB2872FAFC00635F34 /* VisualizePinFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958EA2872FAFB00635F34 /* VisualizePinFactory.swift */; };
+		40A958ED2872FB0D00635F34 /* VisualizePinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958EC2872FB0D00635F34 /* VisualizePinViewController.swift */; };
+		40A958EF2872FB1800635F34 /* VisualizePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958EE2872FB1800635F34 /* VisualizePinView.swift */; };
+		40A958F12872FC2B00635F34 /* VisualizePinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958F02872FC2B00635F34 /* VisualizePinInteractor.swift */; };
+		40A958F32872FC3900635F34 /* VisualizePinPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958F22872FC3900635F34 /* VisualizePinPresenter.swift */; };
+		40A958F52872FF5B00635F34 /* VisualizePinWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A958F42872FF5B00635F34 /* VisualizePinWorker.swift */; };
 		40C00FBD286E92B4002D9820 /* PositionPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C00FBC286E92B4002D9820 /* PositionPinView.swift */; };
 		40C00FC128710C0A002D9820 /* MapBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +50,17 @@
 		40A320402872012E000EC71C /* AddPinFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPinFactory.swift; sourceTree = "<group>"; };
 		40A320422872013A000EC71C /* AddPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPinViewController.swift; sourceTree = "<group>"; };
 		40A3204428720142000EC71C /* AddPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPinView.swift; sourceTree = "<group>"; };
+		40A958DF2872F38600635F34 /* Maps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Maps.xcdatamodel; sourceTree = "<group>"; };
+		40A958E12872F4CB00635F34 /* CoreDataStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorageManager.swift; sourceTree = "<group>"; };
+		40A958E32872F5E600635F34 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		40A958E52872F6F900635F34 /* LocationCoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoreDataStorage.swift; sourceTree = "<group>"; };
+		40A958E72872F86500635F34 /* StorageErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageErrors.swift; sourceTree = "<group>"; };
+		40A958EA2872FAFB00635F34 /* VisualizePinFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizePinFactory.swift; sourceTree = "<group>"; };
+		40A958EC2872FB0D00635F34 /* VisualizePinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizePinViewController.swift; sourceTree = "<group>"; };
+		40A958EE2872FB1800635F34 /* VisualizePinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizePinView.swift; sourceTree = "<group>"; };
+		40A958F02872FC2B00635F34 /* VisualizePinInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizePinInteractor.swift; sourceTree = "<group>"; };
+		40A958F22872FC3900635F34 /* VisualizePinPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizePinPresenter.swift; sourceTree = "<group>"; };
+		40A958F42872FF5B00635F34 /* VisualizePinWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizePinWorker.swift; sourceTree = "<group>"; };
 		40C00FBC286E92B4002D9820 /* PositionPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPinView.swift; sourceTree = "<group>"; };
 		40C00FC028710C0A002D9820 /* MapBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBottomSheetView.swift; sourceTree = "<group>"; };
 		5985E4A55F3F79A0B7EB94CC /* Pods_Maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +110,7 @@
 		402A8D80286E7529004C3FCD /* Maps */ = {
 			isa = PBXGroup;
 			children = (
+				40A958DD2872F34A00635F34 /* Storage */,
 				402A8D97286E76C1004C3FCD /* App */,
 				402A8D96286E76B7004C3FCD /* Resources */,
 				402A8D95286E76B1004C3FCD /* Sources */,
@@ -126,6 +149,7 @@
 		402A8D98286E76D5004C3FCD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				40A958E92872FAEC00635F34 /* VisualizePin */,
 				40A3203F28720114000EC71C /* AddPin */,
 				402A8D99286E772E004C3FCD /* Map */,
 			);
@@ -169,6 +193,31 @@
 				40A3204428720142000EC71C /* AddPinView.swift */,
 			);
 			path = AddPin;
+			sourceTree = "<group>";
+		};
+		40A958DD2872F34A00635F34 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				40A958DE2872F38600635F34 /* Maps.xcdatamodeld */,
+				40A958E12872F4CB00635F34 /* CoreDataStorageManager.swift */,
+				40A958E32872F5E600635F34 /* LocationRepository.swift */,
+				40A958E52872F6F900635F34 /* LocationCoreDataStorage.swift */,
+				40A958E72872F86500635F34 /* StorageErrors.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		40A958E92872FAEC00635F34 /* VisualizePin */ = {
+			isa = PBXGroup;
+			children = (
+				40A958EA2872FAFB00635F34 /* VisualizePinFactory.swift */,
+				40A958EC2872FB0D00635F34 /* VisualizePinViewController.swift */,
+				40A958EE2872FB1800635F34 /* VisualizePinView.swift */,
+				40A958F02872FC2B00635F34 /* VisualizePinInteractor.swift */,
+				40A958F22872FC3900635F34 /* VisualizePinPresenter.swift */,
+				40A958F42872FF5B00635F34 /* VisualizePinWorker.swift */,
+			);
+			path = VisualizePin;
 			sourceTree = "<group>";
 		};
 		661C379D2EF8A639D4999533 /* Frameworks */ = {
@@ -297,12 +346,23 @@
 				40A320432872013A000EC71C /* AddPinViewController.swift in Sources */,
 				40A3204528720142000EC71C /* AddPinView.swift in Sources */,
 				40C00FBD286E92B4002D9820 /* PositionPinView.swift in Sources */,
+				40A958ED2872FB0D00635F34 /* VisualizePinViewController.swift in Sources */,
 				402A8DA7286E7D9F004C3FCD /* ViewCodable.swift in Sources */,
 				402A8D9B286E773D004C3FCD /* MapFactory.swift in Sources */,
+				40A958E42872F5E600635F34 /* LocationRepository.swift in Sources */,
 				40A320412872012E000EC71C /* AddPinFactory.swift in Sources */,
 				402A8D82286E7529004C3FCD /* AppDelegate.swift in Sources */,
+				40A958F52872FF5B00635F34 /* VisualizePinWorker.swift in Sources */,
+				40A958EB2872FAFC00635F34 /* VisualizePinFactory.swift in Sources */,
+				40A958EF2872FB1800635F34 /* VisualizePinView.swift in Sources */,
+				40A958E62872F6F900635F34 /* LocationCoreDataStorage.swift in Sources */,
+				40A958E22872F4CB00635F34 /* CoreDataStorageManager.swift in Sources */,
 				402A8D84286E7529004C3FCD /* SceneDelegate.swift in Sources */,
+				40A958F12872FC2B00635F34 /* VisualizePinInteractor.swift in Sources */,
+				40A958E82872F86500635F34 /* StorageErrors.swift in Sources */,
 				40C00FC128710C0A002D9820 /* MapBottomSheetView.swift in Sources */,
+				40A958E02872F38600635F34 /* Maps.xcdatamodeld in Sources */,
+				40A958F32872FC3900635F34 /* VisualizePinPresenter.swift in Sources */,
 				402A8D9D286E7747004C3FCD /* MapViewController.swift in Sources */,
 				40A3201F2871FC8E000EC71C /* MapRouter.swift in Sources */,
 			);
@@ -516,6 +576,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		40A958DE2872F38600635F34 /* Maps.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40A958DF2872F38600635F34 /* Maps.xcdatamodel */,
+			);
+			currentVersion = 40A958DF2872F38600635F34 /* Maps.xcdatamodel */;
+			path = Maps.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 402A8D76286E7529004C3FCD /* Project object */;
 }

@@ -15,15 +15,12 @@ protocol AddPinViewConfigurable: UIView {
 }
 
 final class AddPinView: UIView {
-    private let resourceOptions = ResourceOptions(accessToken: "pk.eyJ1IjoiY2FybG9zZm9udGVzIiwiYSI6ImNsNTFwYjJkODA3dXIzaWxqdWN0NzY0YWsifQ.qNm5vCkeJNaCa0S8mNhWDA")
-    
     private let cameraOptions = CameraOptions(
         center: CLLocationCoordinate2D(latitude: -21.2267226, longitude: -47.8609912),
         zoom: 15.5
     )
     
     private lazy var mapOptions = MapInitOptions(
-        resourceOptions: resourceOptions,
         cameraOptions: cameraOptions,
         styleURI: .outdoors
     )

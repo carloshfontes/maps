@@ -23,6 +23,7 @@ extension MapRouter: MapRoutingLogic {
     }
     
     func routeToVisualizePin() {
-        
+        let controller = VisualizePinFactory.setup()
+        viewController?.navigationController?.pushViewController(controller, animated: true)
     }
 }
